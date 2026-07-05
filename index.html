@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Your Name">
+    <meta name="description" content="WDD231 course home page featuring coursework, projects, and student information in a responsive layout.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WDD231 | Home</title>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    </noscript>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Go to the home page">
+            <img src="images/logo.svg" alt="" width="56" height="56">
+            <span class="brand-text">Odono John Jachukwu</span>
+        </a>
+
+        <button id="menuBtn" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="navMenu" aria-label="Primary navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="chamber/">Chamber</a>
+            <a href="final/">Final</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="home-heading">
+            <div class="hero-content">
+                <p class="eyebrow">Web Development and Design</p>
+                <h1 id="home-heading">Home</h1>
+                <p>I am building a responsive portfolio experience for WDD231 that highlights coursework, projects, and the skills I am developing in web design and programming.</p>
+                <a class="cta" href="#certificate">Explore the certificate</a>
+            </div>
+            <div class="hero-card">
+                <h2>Why this course matters</h2>
+                <p>Each module introduces practical web concepts that help me turn ideas into accessible, fast, and polished user experiences.</p>
+            </div>
+        </section>
+
+        <section class="about-card" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Me</h2>
+            <p>>My name is Odono John Jachukwu, i'm from Ebonyi state nigeria. I am a student in the Web and Computer Programming certificate path, and this page serves as a central place to showcase my learning journey and the projects created throughout the course.</p>
+            <img src="images/profile.webp" alt="my profile picture">
+            <figcaption>My profile picture</figcaption>
+            <ul class="highlights">
+                <li>Responsive layouts that adapt from mobile to desktop</li>
+                <li>Accessible markup and thoughtful visual hierarchy</li>
+                <li>Clear communication through polished content and structure</li>
+            </ul>
+        </section>
+
+        <section class="certificate-card" id="certificate" aria-labelledby="certificate-heading">
+            <div class="section-heading">
+                <h2 id="certificate-heading">Web &amp; Computer Programming Certificate</h2>
+                <p>These courses form the foundation of my current studies and are organized to highlight the work I have completed and the work still ahead.</p>
+            </div>
+
+            <div class="filter-controls" role="group" aria-label="Filter courses">
+                <button class="filter-btn active" id="allBtn" type="button" data-filter="all">All Courses</button>
+                <button class="filter-btn" id="wddBtn" type="button" data-filter="WDD">WDD Courses</button>
+                <button class="filter-btn" id="cseBtn" type="button" data-filter="CSE">CSE Courses</button>
+            </div>
+
+            <div id="courseContainer" class="course-grid" aria-live="polite"></div>
+            <p id="credits" class="credits-summary" aria-live="polite"></p>
+        </section>
+
+        <section class="info-card" aria-labelledby="student-info-heading">
+            <h2 id="student-info-heading">Student Information</h2>
+            <p>I am continuing my studies through BYU-Pathway and developing strong fundamentals in HTML, CSS, JavaScript, and accessibility.</p>
+            <p>These projects are designed to demonstrate growth, problem-solving, and attention to detail across every assignment.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="social-links" aria-label="Social links">
+            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/yourprofile/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.example.com/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+        </div>
+
+        <p class="footer-meta">&copy; <span id="currentYear"></span> Odono John Jachukwu | Nigeria</p>
+        <p id="lastModified" class="footer-meta"></p>
+    </footer>
+</body>
+</html>
