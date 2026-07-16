@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1f4e79"/>
+      <stop offset="100%" stop-color="#59a5d8"/>
+    </linearGradient>
+  </defs>
+  <rect width="360" height="360" rx="40" fill="#f8fafc"/>
+  <circle cx="180" cy="140" r="80" fill="url(#g)"/>
+  <path d="M110 240h140v30H110z" fill="#1f4e79"/>
+  <text x="180" y="175" text-anchor="middle" font-family="Inter, sans-serif" font-size="28" fill="#ffffff">TCC</text>
+  <text x="180" y="290" text-anchor="middle" font-family="Inter, sans-serif" font-size="26" fill="#1f4e79">Abakaliki</text>
+</svg>

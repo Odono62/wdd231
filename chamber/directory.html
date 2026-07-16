@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abakaliki Chamber of Commerce Directory</title>
+<meta name="description" content="Explore member businesses in the Abakaliki Chamber of Commerce directory.">
+<meta name="author" content="Odono John Jachukwu">
+<link rel="icon" href="images/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Abakaliki Chamber of Commerce">
+<meta property="og:description" content="Explore member businesses in the Abakaliki Chamber of Commerce directory.">
+<meta property="og:image" content="https://odono62.github.io/wdd231/chamber/images/logo.svg">
+<meta property="og:url" content="https://odono62.github.io/wdd231/chamber/directory.html">
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/small.css">
+<link rel="stylesheet" href="styles/large.css">
+<script defer src="scripts/date.js"></script>
+<script defer src="scripts/directory.js"></script>
+</head>
+<body>
+<header class="page-header">
+<div class="brand">
+<img src="images/logo.svg" alt="Abakaliki Chamber logo">
+<div>
+<p class="eyebrow">Abakaliki Chamber of Commerce</p>
+<h1>Connecting area businesses.</h1>
+</div>
+</div>
+<button id="menu" aria-controls="primary-navigation" aria-expanded="false">Menu</button>
+<nav id="primary-navigation" class="main-nav">
+<a href="index.html">Home</a>
+<a href="discover.html">Discover</a>
+<a href="directory.html" class="active">Business Directory</a>
+<a href="join.html">Join</a>
+<a href="about.html">About</a>
+<a href="podcast.html">Podcast</a>
+<a href="events.html">Events</a>
+</nav>
+</header>
+<main>
+<section class="intro">
+<h2>Business Directory</h2>
+<p>Browse local chamber member businesses and switch between a card-based grid or a simplified list view.</p>
+</section>
+<div class="view-buttons" role="group" aria-label="Directory view toggle">
+<button id="gridBtn" class="active">Grid</button>
+<button id="listBtn">List</button>
+</div>
+<section id="members" class="members grid" aria-live="polite"></section>
+</main>
+<footer>
+<div class="footer-contact">
+<p class="footer-brand">Abakaliki Chamber of Commerce</p>
+<p>123 Market Road<br>Abakaliki, Ebonyi State</p>
+<p><a href="mailto:info@abakalikkicc.org">info@abakalikkicc.org</a></p>
+<p><a href="tel:+23481275537919">+234 812 755 37919</a></p>
+</div>
+<div class="footer-meta">
+<p>© <span id="year"></span> Odono John Jachukwu | WDD231</p>
+<p>Last Modified: <span id="lastModified"></span></p>
+</div>
+</footer>
+</body>
+</html>

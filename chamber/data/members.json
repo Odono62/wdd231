@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Ebonyi Farms Ltd",
+    "address": "12 Market Road, Abakaliki",
+    "phone": "+2348012345678",
+    "website": "https://ebonyifarms.com",
+    "image": "business1.svg",
+    "membership": 3,
+    "description": "Organic crop production and distribution."
+  },
+  {
+    "name": "Rice City Hotel",
+    "address": "Ogoja Road, Abakaliki",
+    "phone": "+2348098765432",
+    "website": "https://ricecityhotel.com",
+    "image": "business2.svg",
+    "membership": 2,
+    "description": "Full-service hotel for visitors and conferences."
+  },
+  {
+    "name": "Heritage Arts Studio",
+    "address": "4 Unity Avenue, Abakaliki",
+    "phone": "+2348035551212",
+    "website": "https://heritagearts.com",
+    "image": "business3.svg",
+    "membership": 1,
+    "description": "Local art gallery and handmade crafts workshop."
+  },
+  {
+    "name": "Riverstone Bakery",
+    "address": "28 Commerce Street, Abakaliki",
+    "phone": "+2348069997722",
+    "website": "https://riverstonebakery.com",
+    "image": "business4.svg",
+    "membership": 2,
+    "description": "Artisan bread, pastries, and coffee house."
+  },
+  {
+    "name": "Green Market Co-op",
+    "address": "9 Garden Lane, Abakaliki",
+    "phone": "+2348056677880",
+    "website": "https://greenmarket.coop",
+    "image": "business5.svg",
+    "membership": 3,
+    "description": "Community-supported agriculture and produce market."
+  },
+  {
+    "name": "Ebonyi Tech Works",
+    "address": "16 Digital Boulevard, Abakaliki",
+    "phone": "+2348091122334",
+    "website": "https://ebonyitechworks.com",
+    "image": "business6.svg",
+    "membership": 2,
+    "description": "IT support, web design, and technical training."
+  },
+  {
+    "name": "Sunrise Safari Tours",
+    "address": "2 Adventure Road, Abakaliki",
+    "phone": "+2348033344556",
+    "website": "https://sunrisesafari.com",
+    "image": "business7.svg",
+    "membership": 1,
+    "description": "Guided tours and cultural excursions around the region."
+  }
+]

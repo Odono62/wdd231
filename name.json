@@ -1,0 +1,8 @@
+ const studentobject = {
+    name: "Odono John Jachukwu",
+    state: "Ebonyi state",
+    country: "Nigeria"
+}
+
+const jsonString = {"name": "Odono John Jachukwu", "state": "Ebonyi state", "country": "Nigeria"}
+const studentobject2 = JSON.parse(jsonString);

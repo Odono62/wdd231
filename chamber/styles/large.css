@@ -1,0 +1,80 @@
+@media (min-width: 720px) {
+    .page-header {
+        display: grid;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 1.75rem 0 1rem;
+    }
+
+    .brand {
+        gap: 1.25rem;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    #primary-navigation {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 0.75rem;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    #primary-navigation a {
+        padding: 0.85rem 1.15rem;
+        border-radius: 999px;
+        box-shadow: 0 5px 18px rgba(15, 23, 42, 0.08);
+        transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    #primary-navigation a:hover,
+    #primary-navigation a:focus {
+        background: rgba(59, 130, 246, 0.14);
+        transform: translateY(-1px);
+    }
+
+    .member-card {
+        grid-template-columns: 300px 1fr;
+    }
+
+    .member-card img {
+        min-height: 100%;
+    }
+
+    .footer-contact,
+    .footer-meta {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(50% - 0.5rem);
+    }
+}
+
+@media (min-width: 900px) {
+    .members.grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .page-header,
+    .main-nav,
+    .intro,
+    .view-buttons,
+    .members,
+    footer {
+        width: min(1080px, calc(100% - 3rem));
+    }
+}
+
+@media (max-width: 719px) {
+    #primary-navigation {
+        flex-direction: column;
+    }
+
+    #primary-navigation.open {
+        display: flex;
+    }
+}
