@@ -166,12 +166,6 @@ button.active {
     grid-template-columns: 1fr;
 }
 
-#primary-navigation a.active {
-    background: var(--brand-700);
-    color: #fff;
-    border-color: var(--brand-700);
-}
-
 .intro {
     padding: 0.5rem 0 0.5rem;
 }
