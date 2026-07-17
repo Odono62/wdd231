@@ -11,34 +11,43 @@ const membershipLabel = level =>
 const formatPhone = phone => phone.replace(/[^+0-9]/g, "");
 
 function displayMembers(members) {
-    container.innerHTML = members
-        .map(member => `
-            <article class="member-card membership-${member.membership}">
-                <div class="member-copy">
-                    <div class="member-headline">
-                        <h3>${member.name}</h3>
-                        <span class="member-level">${membershipLabel(member.membership)}</span>
-                    </div>
-                    <p class="member-description">${member.description}</p>
-                    <p>${member.address}</p>
-                    <p><a href="tel:${formatPhone(member.phone)}">${member.phone}</a></p>
-                    <p><a href="${member.website}" target="_blank" rel="noopener">${member.website}</a></p>
+    if (!container) return;
+
+    const fragment = document.createDocumentFragment();
+
+    members.forEach(member => {
+        const article = document.createElement("article");
+        article.className = `member-card membership-${member.membership}`;
+        article.innerHTML = `
+            <div class="member-copy">
+                <div class="member-headline">
+                    <h3>${member.name}</h3>
+                    <span class="member-level">${membershipLabel(member.membership)}</span>
                 </div>
-            </article>
-        `)
-        .join("");
+                <p class="member-description">${member.description}</p>
+                <p>${member.address}</p>
+                <p><a href="tel:${formatPhone(member.phone)}">${member.phone}</a></p>
+                <p><a href="${member.website}" target="_blank" rel="noopener">${member.website}</a></p>
+            </div>
+        `;
+        fragment.appendChild(article);
+    });
+
+    container.replaceChildren(fragment);
 }
 
 async function getMembers() {
-    const response = await fetch(url);
-    const data = await response.json();
-    displayMembers(data);
-}
-
-async function getMembers() {
-    const response = await fetch(url);
-    const members = await response.json();
-    displayMembers(members);
+    try {
+        const response = await fetch(url, { cache: "force-cache" });
+        if (!response.ok) throw new Error(`Request failed: ${response.status}`);
+        const members = await response.json();
+        displayMembers(members);
+    } catch (error) {
+        if (container) {
+            container.innerHTML = "<p>Unable to load chamber members right now.</p>";
+        }
+        console.error(error);
+    }
 }
 
 function setActiveButton(selectedButton) {
@@ -47,21 +56,33 @@ function setActiveButton(selectedButton) {
     });
 }
 
-gridBtn.addEventListener("click", () => {
-    container.classList.add("grid");
-    container.classList.remove("list");
-    setActiveButton(gridBtn);
-});
+function initDirectory() {
+    if (gridBtn && listBtn) {
+        gridBtn.addEventListener("click", () => {
+            container.classList.add("grid");
+            container.classList.remove("list");
+            setActiveButton(gridBtn);
+        });
 
-listBtn.addEventListener("click", () => {
-    container.classList.add("list");
-    container.classList.remove("grid");
-    setActiveButton(listBtn);
-});
+        listBtn.addEventListener("click", () => {
+            container.classList.add("list");
+            container.classList.remove("grid");
+            setActiveButton(listBtn);
+        });
+    }
 
-menuBtn.addEventListener("click", () => {
-    const expanded = nav.classList.toggle("open");
-    menuBtn.setAttribute("aria-expanded", expanded);
-});
+    if (menuBtn && nav) {
+        menuBtn.addEventListener("click", () => {
+            const expanded = nav.classList.toggle("open");
+            menuBtn.setAttribute("aria-expanded", expanded);
+        });
+    }
 
-getMembers();
+    getMembers();
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initDirectory, { once: true });
+} else {
+    initDirectory();
+}
