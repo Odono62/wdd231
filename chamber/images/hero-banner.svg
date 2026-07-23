@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="heroTitle heroDesc">
+  <title id="heroTitle">Chamber community illustration</title>
+  <desc id="heroDesc">Illustration of multiple businesses connected with growth, networking, and local support.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#e0f2fe" offset="0%"/>
+      <stop stop-color="#ffffff" offset="100%"/>
+    </linearGradient>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#2563eb" offset="0%"/>
+      <stop stop-color="#0ea5e9" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" rx="40" fill="url(#bg)"/>
+  <g fill="none" stroke="url(#grad)" stroke-width="16" stroke-linecap="round">
+    <path d="M180 580 Q300 450 520 520 T900 520"/>
+    <path d="M240 520 Q360 390 620 460 T980 460" opacity="0.7"/>
+  </g>
+  <circle cx="220" cy="340" r="90" fill="#fff" stroke="#2563eb" stroke-width="14"/>
+  <circle cx="560" cy="240" r="70" fill="#fff" stroke="#0ea5e9" stroke-width="10"/>
+  <circle cx="860" cy="380" r="100" fill="#fff" stroke="#1d4ed8" stroke-width="12"/>
+  <path d="M190 430 l90 -120 l40 20 l-90 120 z" fill="#3b82f6" opacity="0.2"/>
+  <path d="M530 340 l60 -80 l50 10 l-60 80 z" fill="#22d3ee" opacity="0.25"/>
+  <path d="M820 460 l100 -100 l45 15 l-100 100 z" fill="#38bdf8" opacity="0.2"/>
+  <g fill="#2563eb">
+    <circle cx="190" cy="240" r="10"/>
+    <circle cx="320" cy="260" r="8"/>
+    <circle cx="240" cy="410" r="8"/>
+    <circle cx="470" cy="190" r="10"/>
+    <circle cx="650" cy="260" r="8"/>
+    <circle cx="900" cy="290" r="9"/>
+  </g>
+  <rect x="150" y="268" width="140" height="120" rx="20" fill="#155e75" opacity="0.75"/>
+  <rect x="518" y="176" width="130" height="90" rx="18" fill="#0ea5e9" opacity="0.75"/>
+  <rect x="830" y="310" width="150" height="130" rx="22" fill="#1d4ed8" opacity="0.75"/>
+  <path d="M190 280 h90 v40 h-90 z" fill="#ffffff"/>
+  <path d="M540 200 h70 v30 h-70 z" fill="#ffffff"/>
+  <path d="M850 330 h90 v45 h-90 z" fill="#ffffff"/>
+</svg>

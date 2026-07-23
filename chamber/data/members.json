@@ -5,7 +5,8 @@
     "phone": "+2348012345678",
     "website": "https://ebonyifarms.com",
     "membership": 3,
-    "description": "Organic crop production and distribution."
+    "description": "Organic crop production and distribution.",
+    "logo": "images/ebonyi-farms-logo.png"
   },
   {
     "name": "Rice City Hotel",
@@ -13,7 +14,8 @@
     "phone": "+2348098765432",
     "website": "https://ricecityhotel.com",
     "membership": 2,
-    "description": "Full-service hotel for visitors and conferences."
+    "description": "Full-service hotel for visitors and conferences.",
+    "logo": "images/rice-city-logo.png"
   },
   {
     "name": "Heritage Arts Studio",
@@ -21,7 +23,8 @@
     "phone": "+2348035551212",
     "website": "https://heritagearts.com",
     "membership": 1,
-    "description": "Local art gallery and handmade crafts workshop."
+    "description": "Local art gallery and handmade crafts workshop.",
+    "logo": "images/heritage-arts-logo.png"
   },
   {
     "name": "Riverstone Bakery",
@@ -29,7 +32,8 @@
     "phone": "+2348069997722",
     "website": "https://riverstonebakery.com",
     "membership": 2,
-    "description": "Artisan bread, pastries, and coffee house."
+    "description": "Artisan bread, pastries, and coffee house.",
+    "logo": "images/riverstone-bakery-logo.png"
   },
   {
     "name": "Green Market Co-op",
@@ -37,7 +41,8 @@
     "phone": "+2348056677880",
     "website": "https://greenmarket.coop",
     "membership": 3,
-    "description": "Community-supported agriculture and produce market."
+    "description": "Community-supported agriculture and produce market.",
+    "logo": "images/green-market-logo.png"
   },
   {
     "name": "Ebonyi Tech Works",
@@ -45,7 +50,8 @@
     "phone": "+2348091122334",
     "website": "https://ebonyitechworks.com",
     "membership": 2,
-    "description": "IT support, web design, and technical training."
+    "description": "IT support, web design, and technical training.",
+    "logo": "images/ebonyi-tech-logo.png"
   },
   {
     "name": "Sunrise Safari Tours",
@@ -53,6 +59,7 @@
     "phone": "+2348033344556",
     "website": "https://sunrisesafari.com",
     "membership": 1,
-    "description": "Guided tours and cultural excursions around the region."
+    "description": "Guided tours and cultural excursions around the region.",
+    "logo": "images/sunrise-safari-logo.png"
   }
 ]

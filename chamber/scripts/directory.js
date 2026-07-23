@@ -19,6 +19,7 @@ function displayMembers(members) {
         const article = document.createElement("article");
         article.className = `member-card membership-${member.membership}`;
         article.innerHTML = `
+            <img src="${member.logo}" alt="${member.name} logo" class="member-logo" loading="lazy" decoding="async">
             <div class="member-copy">
                 <div class="member-headline">
                     <h3>${member.name}</h3>

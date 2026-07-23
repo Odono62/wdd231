@@ -273,6 +273,179 @@ footer a {
     color: var(--brand-700);
 }
 
+.hero {
+    display: grid;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.hero-copy {
+    max-width: 36rem;
+}
+
+.hero-copy h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.05;
+}
+
+.hero-copy p {
+    color: var(--muted);
+    margin: 0 0 1.5rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.95rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 700;
+    border: 1px solid transparent;
+    text-decoration: none;
+}
+
+.button.primary {
+    background: var(--brand-700);
+    color: #fff;
+}
+
+.button.secondary {
+    background: var(--surface);
+    border-color: var(--brand-700);
+    color: var(--brand-700);
+}
+
+.hero-image img {
+    width: 100%;
+    display: block;
+    border-radius: 24px;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.section-heading {
+    margin-bottom: 1rem;
+}
+
+.section-heading h2 {
+    margin: 0 0 0.35rem;
+}
+
+.section-heading p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.event-cards,
+.weather-grid,
+.spotlight-cards {
+    display: grid;
+    gap: 1rem;
+}
+
+.event-card,
+.weather-card,
+.weather-forecast,
+.spotlight-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 1.25rem;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.05);
+}
+
+.event-date {
+    margin: 0 0 0.65rem;
+    color: var(--brand-700);
+    font-weight: 700;
+}
+
+.event-location {
+    margin: 1rem 0 0;
+    color: var(--muted);
+}
+
+.weather-card-inner h3,
+.weather-forecast h3 {
+    margin: 0 0 0.75rem;
+}
+
+.weather-temp {
+    margin: 0.25rem 0 0.75rem;
+    font-size: 2.5rem;
+    color: var(--brand-900);
+}
+
+.weather-desc {
+    margin: 0;
+    color: var(--muted);
+    text-transform: capitalize;
+}
+
+.forecast-list {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.forecast-day {
+    background: var(--brand-200);
+    border-radius: 18px;
+    padding: 0.9rem 1rem;
+}
+
+.forecast-date {
+    margin: 0 0 0.45rem;
+    color: var(--brand-700);
+    font-weight: 700;
+}
+
+.spotlight-card {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+.spotlight-logo {
+    width: 96px;
+    height: 96px;
+    display: grid;
+    place-items: center;
+    border-radius: 24px;
+    background: var(--brand-200);
+}
+
+.spotlight-logo img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+}
+
+.spotlight-copy h3 {
+    margin: 0 0 0.35rem;
+}
+
+.spotlight-level {
+    margin: 0 0 0.75rem;
+    color: var(--brand-700);
+    font-weight: 700;
+}
+
+.spotlight-copy p {
+    margin: 0 0 0.5rem;
+}
+
+.spotlight-copy a {
+    color: var(--brand-700);
+}
+
 main,
 footer {
     width: min(1080px, calc(100% - 2rem));
@@ -318,6 +491,24 @@ footer {
     #primary-navigation a:focus {
         background: rgba(59, 130, 246, 0.14);
         transform: translateY(-1px);
+    }
+
+    .hero {
+        grid-template-columns: 1fr minmax(300px, 1fr);
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .event-cards {
+        grid-template-columns: repeat(3, minmax(220px, 1fr));
+    }
+
+    .weather-grid {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+    }
+
+    .spotlight-cards {
+        grid-template-columns: repeat(3, minmax(260px, 1fr));
     }
 
     .member-card {
