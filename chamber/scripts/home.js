@@ -156,3 +156,25 @@ if (document.readyState === "loading") {
     loadWeather();
     loadSpotlights();
 }
+
+// Menu toggle for small screens: tie button to nav and handle ARIA
+const menuButton = document.querySelector('#menu');
+const primaryNav = document.querySelector('#primary-navigation');
+
+function toggleMenu() {
+    const expanded = menuButton.getAttribute('aria-expanded') === 'true';
+    menuButton.setAttribute('aria-expanded', String(!expanded));
+    primaryNav.classList.toggle('open');
+}
+
+if (menuButton && primaryNav) {
+    menuButton.addEventListener('click', toggleMenu);
+    // allow closing the menu with Escape for accessibility
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && primaryNav.classList.contains('open')) {
+            menuButton.setAttribute('aria-expanded', 'false');
+            primaryNav.classList.remove('open');
+            menuButton.focus();
+        }
+    });
+}
