@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank you — Abakaliki Chamber</title>
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/main.css">
+<script defer src="scripts/date.js"></script>
+<script defer src="scripts/thankyou.js"></script>
+</head>
+<body>
+<header class="page-header">
+<div class="brand">
+<img src="images/logo.svg" alt="Abakaliki Chamber logo" width="72" height="72" decoding="async">
+<div>
+<p class="eyebrow">Abakaliki Chamber of Commerce</p>
+<p class="brand-title">Connecting area businesses.</p>
+</div>
+</div>
+<button id="menu" aria-controls="primary-navigation" aria-expanded="false">Menu</button>
+<nav id="primary-navigation" class="main-nav">
+  <a href="index.html">Home</a>
+  <a href="discover.html">Discover</a>
+  <a href="directory.html">Business Directory</a>
+  <a href="join.html">Join</a>
+</nav>
+</header>
+<main class="container">
+  <section class="section-heading">
+    <h1>Thank you for applying</h1>
+    <p>We appreciate your interest. Below is a summary of the information you submitted.</p>
+  </section>
+
+  <section id="summary" class="summary">
+    <!-- populated by thankyou.js -->
+  </section>
+
+  <p><a href="index.html" class="button">Return home</a></p>
+</main>
+
+<footer>
+<div class="footer-contact">
+  <p class="footer-brand">Abakaliki Chamber of Commerce</p>
+  <p>123 Market Road<br>Abakaliki, Ebonyi State</p>
+  <p><a href="mailto:info@abakalikkicc.org">info@abakalikkicc.org</a></p>
+</div>
+<div class="footer-meta">
+  <p>© <span id="year"></span> Odono John Jachukwu | WDD231</p>
+  <p>Last Modified: <span id="lastModified"></span></p>
+  </div>
+</footer>
+
+</body>
+</html>

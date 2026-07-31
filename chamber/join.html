@@ -3,21 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Join the Chamber</title>
-<meta name="description" content="Learn how to join the Abakaliki Chamber of Commerce and become a member.">
-<meta name="author" content="Odono John Jachukwu">
+<title>Join — Abakaliki Chamber of Commerce</title>
+<meta name="description" content="Join the Abakaliki Chamber of Commerce. Membership details and application form.">
 <link rel="icon" href="images/favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/normalize.css">
 <link rel="stylesheet" href="styles/main.css">
 <script defer src="scripts/date.js"></script>
+<script defer src="scripts/join.js"></script>
+<style>
+/* layout for form + membership levels */
+.form-levels {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 880px) {
+  .form-levels { grid-template-columns: 1fr 360px; align-items: start; }
+}
+.levels { display: grid; gap: 1rem; }
+.level-card { padding: 1rem; border: 1px solid var(--border, #ddd); border-radius:8px; background:#fff; animation: pop .6s ease both; }
+.level-card:nth-child(1){ animation-delay: 0.05s }
+.level-card:nth-child(2){ animation-delay: 0.12s }
+.level-card:nth-child(3){ animation-delay: 0.20s }
+.level-card:nth-child(4){ animation-delay: 0.28s }
+@keyframes pop{ from{opacity:0; transform:translateY(14px)} to{opacity:1; transform:none} }
+.levels .info-link{ display:inline-block; margin-top:.5rem }
+dialog{ max-width:600px; padding:1.25rem;border-radius:8px }
+.form-stack{ display:grid; gap:.75rem }
+label span.field-label{ display:block; font-weight:600; margin-bottom:.25rem }
+.form-actions{ margin-top:1rem }
+</style>
 </head>
 <body>
 <header class="page-header">
+<!-- same header/nav as index.html to maintain site pattern -->
 <div class="brand">
-<img src="images/logo.svg" alt="Abakaliki Chamber logo" width="72" height="72" decoding="async" fetchpriority="high">
+<img src="images/logo.svg" alt="Abakaliki Chamber logo" width="72" height="72" decoding="async">
 <div>
 <p class="eyebrow">Abakaliki Chamber of Commerce</p>
 <p class="brand-title">Connecting area businesses.</p>
@@ -25,45 +45,148 @@
 </div>
 <button id="menu" aria-controls="primary-navigation" aria-expanded="false">Menu</button>
 <nav id="primary-navigation" class="main-nav">
-<a href="index.html">Home</a>
-<a href="discover.html">Discover</a>
-<a href="directory.html">Business Directory</a>
-<a href="join.html" class="active">Join</a>
-<a href="about.html">About</a>
-<a href="podcast.html">Podcast</a>
-<a href="events.html">Events</a>
+  <a href="index.html">Home</a>
+  <a href="discover.html">Discover</a>
+  <a href="directory.html">Business Directory</a>
+  <a href="join.html" class="active">Join</a>
 </nav>
 </header>
 <main>
-<section class="intro">
-<h1>Join the Abakaliki Chamber</h1>
-<p>Becoming a member gives your business access to networking, promotion, and local support from the region’s most active organizations.</p>
+<section class="section-heading">
+  <h1>Join the Chamber</h1>
+  <p>Complete the form to apply for membership. Required fields are marked.</p>
 </section>
-<section class="content-block">
-<h2>Why Join?</h2>
-<ul>
-<li>Connect with other local businesses.</li>
-<li>Receive community event invitations and promotions.</li>
-<li>Grow your brand with chamber support and visibility.</li>
-</ul>
+
+<section class="form-levels container">
+  <form id="join-form" class="form-stack" method="get" action="thankyou.html" novalidate>
+    <label>
+      <span class="field-label">First name *</span>
+      <input type="text" name="firstName" title="Applicant's first name" autocomplete="given-name" required>
+    </label>
+
+    <label>
+      <span class="field-label">Last name *</span>
+      <input type="text" name="lastName" title="Applicant's last name" autocomplete="family-name" required>
+    </label>
+
+    <label>
+      <span class="field-label">Organizational title</span>
+      <input type="text" name="orgTitle" title="Your title within the organization" autocomplete="organization-title" pattern="^[A-Za-z\s-]{7,}$" placeholder="e.g. Executive Director">
+    </label>
+
+    <label>
+      <span class="field-label">Email address *</span>
+      <input type="email" name="email" title="Email address" autocomplete="email" placeholder="name@example.com" required>
+    </label>
+
+    <label>
+      <span class="field-label">Mobile phone *</span>
+      <input type="tel" name="phone" title="Mobile phone number" autocomplete="tel" required>
+    </label>
+
+    <label>
+      <span class="field-label">Business / Organization *</span>
+      <input type="text" name="organization" title="Business or organization name" autocomplete="organization" required>
+    </label>
+
+    <label>
+      <span class="field-label">Membership level</span>
+      <select name="membership" title="Select membership level" required>
+        <option value="np">NP Membership — Non-profit (no fee)</option>
+        <option value="bronze">Bronze Membership</option>
+        <option value="silver">Silver Membership</option>
+        <option value="gold">Gold Membership</option>
+      </select>
+    </label>
+
+    <label>
+      <span class="field-label">Organization description</span>
+      <textarea name="description" title="Description of your business or organization" rows="4"></textarea>
+    </label>
+
+    <input type="hidden" id="timestamp" name="timestamp" value="">
+
+    <div class="form-actions">
+      <input type="submit" value="Apply for Membership">
+    </div>
+  </form>
+
+  <aside class="levels" aria-label="Membership levels">
+    <div class="level-card">
+      <h3>NP Membership</h3>
+      <p>Non-profit membership — no fee.</p>
+      <a href="#" class="info-link" data-modal="modal-np">More info</a>
+    </div>
+    <div class="level-card">
+      <h3>Bronze Membership</h3>
+      <p>Basic benefits for small organizations.</p>
+      <a href="#" class="info-link" data-modal="modal-bronze">More info</a>
+    </div>
+    <div class="level-card">
+      <h3>Silver Membership</h3>
+      <p>Increased visibility and event discounts.</p>
+      <a href="#" class="info-link" data-modal="modal-silver">More info</a>
+    </div>
+    <div class="level-card">
+      <h3>Gold Membership</h3>
+      <p>Top-tier benefits including featured spotlights.</p>
+      <a href="#" class="info-link" data-modal="modal-gold">More info</a>
+    </div>
+  </aside>
 </section>
-<section class="content-block">
-<h2>Next Steps</h2>
-<p>Contact our office to request membership information, submit your application, and join upcoming chamber events.</p>
-<p><a class="button primary" href="mailto:info@abakalikkicc.org">Contact Us</a></p>
-</section>
-</main>
+
+<!-- Modals -->
+<dialog id="modal-np" aria-labelledby="np-title">
+  <h3 id="np-title">NP Membership — Benefits</h3>
+  <ul>
+    <li>Community networking</li>
+    <li>Access to member events</li>
+    <li>Non-profit listing in directory</li>
+  </ul>
+  <button class="close">Close</button>
+</dialog>
+
+<dialog id="modal-bronze" aria-labelledby="bronze-title">
+  <h3 id="bronze-title">Bronze Membership — Benefits</h3>
+  <ul>
+    <li>Event access and discounts</li>
+    <li>Basic directory listing</li>
+    <li>Newsletter inclusion</li>
+  </ul>
+  <button class="close">Close</button>
+</dialog>
+
+<dialog id="modal-silver" aria-labelledby="silver-title">
+  <h3 id="silver-title">Silver Membership — Benefits</h3>
+  <ul>
+    <li>Priority event registration</li>
+    <li>Featured directory placement</li>
+    <li>Advertising opportunities</li>
+  </ul>
+  <button class="close">Close</button>
+</dialog>
+
+<dialog id="modal-gold" aria-labelledby="gold-title">
+  <h3 id="gold-title">Gold Membership — Benefits</h3>
+  <ul>
+    <li>Homepage spotlight</li>
+    <li>Premium event sponsorship</li>
+    <li>Dedicated promotional support</li>
+  </ul>
+  <button class="close">Close</button>
+</dialog>
+
 <footer>
 <div class="footer-contact">
-<p class="footer-brand">Abakaliki Chamber of Commerce</p>
-<p>123 Market Road<br>Abakaliki, Ebonyi State</p>
-<p><a href="mailto:info@abakalikkicc.org">info@abakalikkicc.org</a></p>
-<p><a href="tel:+23481275537919">+234 812 755 37919</a></p>
+  <p class="footer-brand">Abakaliki Chamber of Commerce</p>
+  <p>123 Market Road<br>Abakaliki, Ebonyi State</p>
+  <p><a href="mailto:info@abakalikkicc.org">info@abakalikkicc.org</a></p>
 </div>
 <div class="footer-meta">
-<p>© <span id="year"></span> Odono John Jachukwu | WDD231</p>
-<p>Last Modified: <span id="lastModified"></span></p>
-</div>
+  <p>© <span id="year"></span> Odono John Jachukwu | WDD231</p>
+  <p>Last Modified: <span id="lastModified"></span></p>
+  </div>
 </footer>
+
 </body>
 </html>

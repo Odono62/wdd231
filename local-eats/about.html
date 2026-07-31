@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About – Local Eats</title>
+  <meta name="description" content="About Local Eats, my story, mission, and contact form.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/large.css" media="(min-width:1000px)">
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo">Local Eats</a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Open navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><button id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container about-page">
+    <section class="story">
+      <h1>My Story</h1>
+      <p>I'm a passionate food blogger who loves exploring street stalls to fine dining. I began Local Eats to share honest reviews and help readers find great food nearby.</p>
+      <h2>Mission</h2>
+      <p>To celebrate local food culture and connect people with memorable dining experiences.</p>
+
+      <h2>Favourite Cuisines</h2>
+      <ul class="fave-cuisines">
+        <li>Nigerian</li>
+        <li>Italian</li>
+        <li>Indian</li>
+        <li>Chinese</li>
+        <li>Desserts</li>
+      </ul>
+    </section>
+
+    <section class="gallery">
+      <h2>Gallery</h2>
+      <div class="grid gallery-grid">
+        <img data-src="images/placeholder.svg" alt="Dish 1" class="lazy">
+        <img data-src="images/placeholder.svg" alt="Dish 2" class="lazy">
+        <img data-src="images/placeholder.svg" alt="Dish 3" class="lazy">
+        <img data-src="images/placeholder.svg" alt="Dish 4" class="lazy">
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Contact Me</h2>
+      <form id="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <section class="faq">
+      <h2>FAQ</h2>
+      <details>
+        <summary>How do you choose restaurants?</summary>
+        <p>I visit each place at least once and evaluate food, service, and atmosphere.</p>
+      </details>
+      <details>
+        <summary>Can I suggest a restaurant?</summary>
+        <p>Yes — use the contact form or DM on social.</p>
+      </details>
+    </section>
+  </main>
+
+  <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">↑</button>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Local Eats</h3>
+        <p>Food blog & guide to the best restaurants around you.</p>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <div class="social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Twitter">TW</a>
+          <a href="#" aria-label="Facebook">FB</a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>contact@localeats.example</p>
+      </div>
+    </div>
+    <div class="container copyright">
+      <p>&copy; <span id="year"></span> Local Eats. Last modified: <span id="last-modified"></span></p>
+    </div>
+  </footer>
+</body>
+</html>

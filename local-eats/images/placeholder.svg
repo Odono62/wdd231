@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder image</title>
+  <desc id="desc">A warm placeholder background for Local Eats website.</desc>
+  <rect width="1200" height="800" fill="#f7e6dc"/>
+  <circle cx="300" cy="250" r="120" fill="#ff8a4c" opacity=".8"/>
+  <circle cx="860" cy="320" r="140" fill="#ff6a3d" opacity=".9"/>
+  <rect x="120" y="520" width="320" height="180" rx="24" fill="#fff" opacity=".75"/>
+  <rect x="720" y="520" width="320" height="180" rx="24" fill="#fff" opacity=".75"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="48" fill="#9a5a3e">Local Eats</text>
+</svg>

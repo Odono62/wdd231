@@ -1,0 +1,5 @@
+/* Larger screen adjustments */
+.hero{height:70vh}
+.hero h1{font-size:3.5rem}
+.grid.two-col{grid-template-columns:1fr 1fr}
+.dish-card{grid-template-columns:1fr 2fr}

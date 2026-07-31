@@ -1,0 +1,129 @@
+/* Core styles for Local Eats */
+:root{
+  --bg:#fff8f2;
+  --cream:#fff3ea;
+  --primary:#ff6a3d;
+  --accent:#ff8a4c;
+  --muted:#6b6b6b;
+  --text:#222;
+  --card:#fff;
+  --glass:rgba(255,255,255,0.75);
+  --shadow:0 12px 30px rgba(0,0,0,0.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+img{max-width:100%;display:block}
+button,input,textarea,select{font:inherit}
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+.site-header{position:sticky;top:0;background:linear-gradient(180deg,rgba(255,255,255,0.95),rgba(255,255,255,0.8));backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,0.08);z-index:100}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0}
+.logo{font-weight:800;color:var(--primary);text-decoration:none;font-size:1.3rem;letter-spacing:.02em}
+.site-nav ul{display:flex;align-items:center;gap:1rem;list-style:none;margin:0;padding:0}
+.site-nav a, .site-nav button{color:var(--text);text-decoration:none;background:none;border:0;padding:.6rem 1rem;border-radius:999px;transition:background .2s ease}
+.site-nav a:hover, .site-nav button:hover{background:var(--cream);}
+.nav-toggle{display:none;background:none;border:0;padding:.5rem}
+.hamburger, .hamburger::before, .hamburger::after{content:'';display:block;width:28px;height:2px;background:var(--text);border-radius:999px;transition:transform .2s ease}
+.hamburger::before{transform:translateY(-8px)}
+.hamburger::after{transform:translateY(6px)}
+.hero{background-image:url('../images/placeholder.svg');background-size:cover;background-position:center;height:65vh;display:flex;align-items:center}
+.hero-overlay{width:100%;padding:4rem 0;background:linear-gradient(180deg,rgba(0,0,0,0.32),rgba(0,0,0,0.1));color:#fff}
+.hero h1{font-size:clamp(2.6rem,4vw,4rem);margin:0 0 1rem;letter-spacing:.04em;text-transform:uppercase}
+.hero p{max-width:600px;font-size:1.05rem;margin:0 0 1.5rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.85rem 1.2rem;border-radius:999px;border:0;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}
+.btn:hover{transform:translateY(-1px);box-shadow:0 16px 30px rgba(255,106,61,.2)}
+.btn.primary{color:#fff;background:var(--primary)}
+.btn.large{font-size:1.05rem;background:var(--primary);color:#fff}
+.featured{padding:2rem 0}
+.featured h2{margin-top:0;font-size:2rem}
+.dish-card{display:grid;grid-template-columns:1fr 1.35fr;gap:1.5rem;background:var(--card);padding:1.2rem;border-radius:28px;box-shadow:var(--shadow);overflow:hidden}
+.dish-card img{width:100%;height:100%;min-height:260px;object-fit:cover;border-radius:18px}
+.dish-info{display:flex;flex-direction:column;justify-content:center;gap:.9rem}
+.dish-info h3{margin:.2rem 0;font-size:1.8rem}
+.dish-info .restaurant{font-weight:700;margin:0;color:var(--muted)}
+.dish-info .rating{color:#ffb03b}
+.hidden-gems{margin-top:2rem}
+.hidden-gems h3{margin-bottom:1rem}
+.grid{display:grid;gap:1rem}
+.gems-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+.gem-card{background:var(--card);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);transition:transform .25s ease;cursor:pointer}
+.gem-card:hover{transform:translateY(-6px)}
+.gem-card img{height:200px;object-fit:cover}
+.gem-card div{padding:1rem}
+.gem-card h4{margin:.2rem 0}
+.gem-card p{margin:.4rem 0;color:var(--muted)}
+.map-section{padding:2rem 0}
+.map-section h2{margin-top:0}
+.map{height:380px;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);background:#e6e1dd}
+.muted{color:var(--muted);margin-top:.8rem}
+.newsletter{margin:2rem 0;padding:1.5rem;background:linear-gradient(180deg,var(--cream),transparent);border-radius:24px;box-shadow:var(--shadow)}
+.newsletter form{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center}
+.newsletter input[type=email]{flex:1 1 320px;padding:.95rem 1rem;border-radius:12px;border:1px solid #ddd;background:#fff}
+.cta{text-align:center;margin:3rem 0}
+.site-footer{background:#fff;padding:2rem 0;border-top:1px solid rgba(0,0,0,.08)}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+.social a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--cream);color:var(--text);text-decoration:none;transition:transform .2s ease}
+.social a:hover{transform:scale(1.05)}
+.footer-grid h3,h4{margin:0 0 .75rem 0}
+.copyright{margin-top:1rem;border-top:1px solid rgba(0,0,0,.08);padding-top:1rem;font-size:.95rem;color:var(--muted)}
+.scroll-top{position:fixed;right:1rem;bottom:1rem;border-radius:50%;width:44px;height:44px;border:none;background:var(--primary);color:#fff;font-size:1.1rem;display:none;cursor:pointer;box-shadow:var(--shadow)}
+.controls{display:grid;grid-template-columns:1fr auto auto auto;gap:.75rem;align-items:center;margin:1.5rem 0}
+.controls input,.controls select{padding:.9rem 1rem;border-radius:12px;border:1px solid #ddd;background:#fff;min-width:0}
+.controls button{white-space:nowrap;background:var(--primary);color:#fff}
+.review-card{background:var(--card);padding:1rem;border-radius:24px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:1rem;transition:transform .2s ease}
+.review-card:hover{transform:translateY(-4px)}
+.review-card img{border-radius:20px;height:200px;object-fit:cover}
+.review-card .meta{display:grid;gap:.6rem}
+.review-card h3{margin:.2rem 0}
+.review-card .muted{color:var(--muted);margin:0}
+.review-card .rating{color:#ffb03b;font-weight:700}
+.review-card .price{font-size:.95rem;color:var(--accent);font-weight:700}
+.review-card .review-text{margin:0;color:#444}
+.review-card .visited{font-size:.95rem;color:var(--muted)}
+.review-card .fav-btn{width:48px;height:48px;border-radius:50%;border:1px solid rgba(0,0,0,.1);background:var(--cream);cursor:pointer;font-size:1.1rem}
+.skeleton-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.skeleton-card{min-height:280px;border-radius:24px;background:linear-gradient(90deg,#f2e9e5,#fff5ef,#f2e9e5);animation:shimmer 1.4s infinite}
+@keyframes shimmer{0%{background-position:-450px 0}100%{background-position:450px 0}}
+.about-page{padding:2rem 0}
+.about-page .story{margin-bottom:2rem}
+.about-page h1{font-size:2.5rem;margin-bottom:1rem}
+.fave-cuisines{display:flex;flex-wrap:wrap;gap:.8rem;padding:0;list-style:none}
+.fave-cuisines li{background:var(--cream);padding:.8rem 1rem;border-radius:999px}
+.gallery{margin:2rem 0}
+.gallery-grid{grid-template-columns:repeat(auto-fit,minmax(180px,1fr));}
+.gallery-grid img{height:220px;border-radius:18px;object-fit:cover;box-shadow:var(--shadow)}
+.contact form{display:grid;gap:1rem;background:var(--card);padding:1.5rem;border-radius:24px;box-shadow:var(--shadow)}
+.contact input,.contact textarea{width:100%;padding:1rem;border-radius:14px;border:1px solid #ddd;background:#fff}
+.contact button{width:min-content;background:var(--primary);color:#fff}
+.faq details{background:var(--cream);border-radius:14px;padding:1rem;margin-top:1rem}
+.faq summary{font-weight:700;cursor:pointer}
+.faq p{margin:.75rem 0 0 0;color:var(--muted)}
+.no-results{padding:3rem 1rem;color:var(--muted);text-align:center}
+@media (max-width:980px){
+  .controls{grid-template-columns:1fr 1fr;}
+  .hero p{max-width:100%}
+}
+@media (max-width:800px){
+  .hero{height:55vh}
+  .hero-overlay{padding:2rem 0}
+  .dish-card{grid-template-columns:1fr}
+  .nav-toggle{display:block}
+  .site-nav{position:absolute;right:1rem;top:76px;background:var(--card);padding:1rem;box-shadow:var(--shadow);border-radius:18px;display:none;min-width:200px}
+  .site-nav.open{display:block}
+  .site-nav ul{flex-direction:column}
+  .footer-grid{grid-template-columns:1fr}
+  .controls{grid-template-columns:1fr;}
+}
+@media (max-width:600px){
+  .nav-wrap{flex-wrap:wrap}
+  .site-header{padding:0 1rem}
+  .hero h1{font-size:2.2rem}
+  .newsletter form{flex-direction:column}
+}
+/* Accessibility focus */
+a:focus,button:focus,input:focus,textarea:focus,select:focus{outline:3px solid var(--primary);outline-offset:3px}
+[data-theme="dark"]{--bg:#090909;--card:#111111;--cream:#181818;--primary:#ff8a4c;--accent:#ffb971;--muted:#c6c6c6;--text:#f1f1f1}
+[data-theme="dark"] .site-header{background:rgba(15,15,15,0.85)}
+[data-theme="dark"] .site-nav a:hover, [data-theme="dark"] .site-nav button:hover{background:rgba(255,138,76,0.14)}
+[data-theme="dark"] .review-card, [data-theme="dark"] .dish-card, [data-theme="dark"] .gem-card, [data-theme="dark"] .contact form, [data-theme="dark"] .faq details{background:#141414}
+[data-theme="dark"] .newsletter{background:linear-gradient(180deg,#1c1c1c,transparent)}

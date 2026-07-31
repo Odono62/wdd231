@@ -1,0 +1,14 @@
+[
+  {"id":"r1","name":"Mama's Kitchen","cuisine":"Nigerian","address":"12 Lagos St","rating":5,"price":"$","review":"Authentic flavours and warm hospitality.","date":"2026-06-12","photo":"images/placeholder.svg","coords":{"lat":6.5244,"lng":3.3792}},
+  {"id":"r2","name":"Dragon Wok","cuisine":"Chinese","address":"88 Pearl Rd","rating":4,"price":"$$","review":"Crisp dim sum and savoury sauces.","date":"2026-05-10","photo":"images/placeholder.svg","coords":{"lat":6.5300,"lng":3.3800}},
+  {"id":"r3","name":"Pasta Fresca","cuisine":"Italian","address":"7 Roma Ave","rating":5,"price":"$$$","review":"Handmade pasta, silky sauces.","date":"2026-04-02","photo":"images/placeholder.svg","coords":{"lat":6.5210,"lng":3.3750}},
+  {"id":"r4","name":"Curry Corner","cuisine":"Indian","address":"99 Spice Ln","rating":4,"price":"$$","review":"Fragrant spices and rich curries.","date":"2026-02-20","photo":"images/placeholder.svg","coords":{"lat":6.5200,"lng":3.3810}},
+  {"id":"r5","name":"Burger Hub","cuisine":"Fast Food","address":"45 Main St","rating":3,"price":"$","review":"Great quick bites and shakes.","date":"2026-06-01","photo":"images/placeholder.svg","coords":{"lat":6.5190,"lng":3.3820}},
+  {"id":"r6","name":"SeaSalt Grill","cuisine":"Seafood","address":"Pier 7","rating":5,"price":"$$$$","review":"Fresh seafood with stunning views.","date":"2026-03-15","photo":"images/placeholder.svg","coords":{"lat":6.5250,"lng":3.3870}},
+  {"id":"r7","name":"Smokehouse BBQ","cuisine":"BBQ","address":"120 Pit Rd","rating":4,"price":"$$","review":"Smoky brisket and tender ribs.","date":"2026-01-22","photo":"images/placeholder.svg","coords":{"lat":6.5150,"lng":3.3700}},
+  {"id":"r8","name":"Sweet Tooth","cuisine":"Desserts","address":"3 Candy St","rating":5,"price":"$","review":"Decadent cakes and perfect pastries.","date":"2026-05-30","photo":"images/placeholder.svg","coords":{"lat":6.5222,"lng":3.3799}},
+  {"id":"r9","name":"Veggie Delight","cuisine":"Vegetarian","address":"56 Green Rd","rating":4,"price":"$$","review":"Fresh and inventive plant-based dishes.","date":"2026-04-20","photo":"images/placeholder.svg","coords":{"lat":6.5270,"lng":3.3760}},
+  {"id":"r10","name":"Taco Fiesta","cuisine":"Mexican","address":"84 Fiesta Ave","rating":4,"price":"$","review":"Zesty tacos and vibrant salsas.","date":"2026-06-05","photo":"images/placeholder.svg","coords":{"lat":6.5235,"lng":3.3790}},
+  {"id":"r11","name":"Noodle Nook","cuisine":"Chinese","address":"11 Chopstick Ln","rating":3,"price":"$","review":"Comforting noodle bowls.","date":"2026-02-14","photo":"images/placeholder.svg","coords":{"lat":6.5185,"lng":3.3835}},
+  {"id":"r12","name":"Spice Route","cuisine":"Indian","address":"2 Curry Row","rating":5,"price":"$$$","review":"Aromatic dishes and modern plating.","date":"2026-03-03","photo":"images/placeholder.svg","coords":{"lat":6.5260,"lng":3.3840}}
+]

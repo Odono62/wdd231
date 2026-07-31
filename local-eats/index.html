@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Local Eats – Food Blog & Guide</title>
+  <meta name="description" content="Local Eats: discover the best local restaurants, reviews, and hidden gems in your city. Food blog & guide.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-sA+gFQVOQlji0yU6KMYzs1Qw4MZQCT8ThT0JjQJpGik=" crossorigin="" />
+  <link rel="stylesheet" href="css/large.css" media="(min-width:1000px)">
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-o9N1jN2It5v2sZmw3vkiqv+XZPpN6W8HhikMAlK2bM0=" crossorigin=""></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/map.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo">Local Eats</a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Open navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><button id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-overlay">
+        <div class="container">
+          <h1>Local Eats</h1>
+          <p>Discover the best local restaurants, hidden gems, and tasty dishes near you.</p>
+          <a class="btn primary" href="#featured">Explore</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured container" id="featured">
+      <h2>Dish of the Month</h2>
+      <article class="dish-card">
+        <img data-src="images/placeholder.svg" alt="Featured Dish" class="lazy">
+        <div class="dish-info">
+          <h3>Jollof Rice Special</h3>
+          <p class="restaurant">Mama's Kitchen • <span class="rating">★★★★★</span></p>
+          <p class="review">A rich, smoky, and perfectly spiced jollof rice that captures the heart of home-cooked comfort food.</p>
+        </div>
+      </article>
+
+      <div class="hidden-gems">
+        <h3>Hidden Restaurants</h3>
+        <div class="grid gems-grid" id="gems-list">
+          <!-- hidden gem cards populated by JS -->
+        </div>
+      </div>
+
+    </section>
+
+    <section class="map-section container">
+      <h2>Find Restaurants Near You</h2>
+      <div id="map" class="map"></div>
+      <p id="nearby-info" class="muted"></p>
+    </section>
+
+    <section class="newsletter container">
+      <h2>Join Our Newsletter</h2>
+      <form id="newsletter-form">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
+    </section>
+
+    <section class="cta container">
+      <a href="reviews.html" class="btn large">Read Reviews & Blog</a>
+    </section>
+  </main>
+
+  <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">↑</button>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Local Eats</h3>
+        <p>Food blog & guide to the best restaurants around you.</p>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <div class="social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Twitter">TW</a>
+          <a href="#" aria-label="Facebook">FB</a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>contact@localeats.example</p>
+      </div>
+    </div>
+    <div class="container copyright">
+      <p>&copy; <span id="year"></span> Local Eats. Last modified: <span id="last-modified"></span></p>
+    </div>
+  </footer>
+
+</body>
+</html>
