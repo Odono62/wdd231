@@ -5,33 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Join — Abakaliki Chamber of Commerce</title>
 <meta name="description" content="Join the Abakaliki Chamber of Commerce. Membership details and application form.">
+<meta name="author" content="Odono John Jachukwu">
 <link rel="icon" href="images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Join the Abakaliki Chamber of Commerce">
+<meta property="og:description" content="Apply for membership in the Abakaliki Chamber of Commerce and connect with local business leaders.">
+<meta property="og:image" content="https://odono62.github.io/wdd231/chamber/images/logo.svg">
+<meta property="og:url" content="https://odono62.github.io/wdd231/chamber/join.html">
 <link rel="stylesheet" href="styles/normalize.css">
 <link rel="stylesheet" href="styles/main.css">
 <script defer src="scripts/date.js"></script>
 <script defer src="scripts/join.js"></script>
-<style>
-/* layout for form + membership levels */
-.form-levels {
-  display: grid;
-  gap: 1.5rem;
-}
-@media (min-width: 880px) {
-  .form-levels { grid-template-columns: 1fr 360px; align-items: start; }
-}
-.levels { display: grid; gap: 1rem; }
-.level-card { padding: 1rem; border: 1px solid var(--border, #ddd); border-radius:8px; background:#fff; animation: pop .6s ease both; }
-.level-card:nth-child(1){ animation-delay: 0.05s }
-.level-card:nth-child(2){ animation-delay: 0.12s }
-.level-card:nth-child(3){ animation-delay: 0.20s }
-.level-card:nth-child(4){ animation-delay: 0.28s }
-@keyframes pop{ from{opacity:0; transform:translateY(14px)} to{opacity:1; transform:none} }
-.levels .info-link{ display:inline-block; margin-top:.5rem }
-dialog{ max-width:600px; padding:1.25rem;border-radius:8px }
-.form-stack{ display:grid; gap:.75rem }
-label span.field-label{ display:block; font-weight:600; margin-bottom:.25rem }
-.form-actions{ margin-top:1rem }
-</style>
 </head>
 <body>
 <header class="page-header">
@@ -58,6 +45,7 @@ label span.field-label{ display:block; font-weight:600; margin-bottom:.25rem }
 </section>
 
 <section class="form-levels container">
+  <h2 class="sr-only">Membership application and level information</h2>
   <form id="join-form" class="form-stack" method="get" action="thankyou.html" novalidate>
     <label>
       <span class="field-label">First name *</span>
@@ -90,8 +78,9 @@ label span.field-label{ display:block; font-weight:600; margin-bottom:.25rem }
     </label>
 
     <label>
-      <span class="field-label">Membership level</span>
+      <span class="field-label">Membership level *</span>
       <select name="membership" title="Select membership level" required>
+        <option value="" disabled selected hidden>Select a membership level</option>
         <option value="np">NP Membership — Non-profit (no fee)</option>
         <option value="bronze">Bronze Membership</option>
         <option value="silver">Silver Membership</option>
@@ -134,6 +123,7 @@ label span.field-label{ display:block; font-weight:600; margin-bottom:.25rem }
     </div>
   </aside>
 </section>
+</main>
 
 <!-- Modals -->
 <dialog id="modal-np" aria-labelledby="np-title">
